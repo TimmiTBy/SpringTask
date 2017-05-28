@@ -18,13 +18,9 @@ import org.springframework.web.servlet.ModelAndView;
 @RequestMapping("/")
 public class FrontController {
 
-   @Autowired
-   UserService userService;
-
     @RequestMapping(value = { "/", "/welcome**" }, method = RequestMethod.GET)
     public ModelAndView welcomePage() {
         ModelAndView model = new ModelAndView();
-        User user = userService.findUserByName("Pavel");
         model.setViewName("login");
         return model;
     }
