@@ -1,6 +1,6 @@
 package com.jmp.dao;
 
-import com.jmp.entity.User;
+import com.jmp.model.User;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;

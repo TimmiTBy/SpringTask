@@ -1,7 +1,9 @@
-package com.jmp.entity;
+package com.jmp.model;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.HashSet;
+import java.util.Set;
 
 
 /**
@@ -27,6 +29,9 @@ public class User implements Serializable {
             joinColumns = {@JoinColumn(name = "USER_ID")},
             inverseJoinColumns = {@JoinColumn(name = "ROLE_ID")})
     private Role role;
+
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    private Set<UserDocument> userDocuments = new HashSet<UserDocument>();
 
     public User() {
     }

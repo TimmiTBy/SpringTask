@@ -1,7 +1,7 @@
 package com.jmp.service;
 
 import com.jmp.dao.UserDao;
-import com.jmp.entity.User;
+import com.jmp.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

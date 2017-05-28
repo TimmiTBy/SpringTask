@@ -1,7 +1,7 @@
 package com.jmp.service;
 
 import com.jmp.dao.UserDao;
-import com.jmp.entity.Role;
+import com.jmp.model.Role;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
@@ -31,14 +31,14 @@ public class UniversityUserDetailsService implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 
-        com.jmp.entity.User user = userDao.findUserByName(username);
+        com.jmp.model.User user = userDao.findUserByName(username);
         List<GrantedAuthority> authorities =
                 buildUserAuthority(user.getRole());
 
         return buildUserForAuthentication(user, authorities);
     }
 
-    private User buildUserForAuthentication(com.jmp.entity.User user,
+    private User buildUserForAuthentication(com.jmp.model.User user,
                                             List<GrantedAuthority> authorities) {
         return new User(user.getName(), user.getPassword(), authorities);
     }

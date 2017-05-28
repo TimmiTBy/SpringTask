@@ -1,4 +1,4 @@
-package com.jmp.entity;
+package com.jmp.model;
 
 import javax.persistence.*;
 

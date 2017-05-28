@@ -2,6 +2,9 @@
 <%@page session="true"%>
 <html>
 <body>
-	Welcome teacher
+	Welcome teacher, ${user.name}
+	<span>
+        <a href="<c:url value='/add-document-${user.name}' />">Click here to upload/manage your documents</a>
+    </span>
 </body>
 </html>

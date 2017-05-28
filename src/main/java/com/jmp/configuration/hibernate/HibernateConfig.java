@@ -23,7 +23,7 @@ public class HibernateConfig {
     @Bean(name = "sessionFactory")
     public SessionFactory getSessionFactory(DataSource dataSource) {
         LocalSessionFactoryBuilder sessionBuilder = new LocalSessionFactoryBuilder(dataSource);
-        sessionBuilder.scanPackages("com.jmp.entity");
+        sessionBuilder.scanPackages("com.jmp.model");
         sessionBuilder.addProperties(getHibernateProperties());
         return sessionBuilder.buildSessionFactory();
     }

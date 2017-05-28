@@ -1,6 +1,6 @@
 package com.jmp.service;
 
-import com.jmp.entity.User;
+import com.jmp.model.User;
 
 /**
  * Created by Ales on 23.05.2017.

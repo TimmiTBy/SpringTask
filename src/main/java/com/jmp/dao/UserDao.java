@@ -1,6 +1,6 @@
 package com.jmp.dao;
 
-import com.jmp.entity.User;
+import com.jmp.model.User;
 
 /**
  * Created by Ales on 22.05.2017.
